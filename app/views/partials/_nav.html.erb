@@ -1,9 +1,7 @@
 <nav class="nav has-shadow">
   <div class="container">
     <div class="nav-left">
-      <a class="nav-item">
-        ForumForum
-      </a>
+      <%= link_to 'ForumForum', root_path, class: 'nav-item' %>
       <a class="nav-item is-tab is-hidden-mobile is-active">Home</a>
       <a class="nav-item is-tab is-hidden-mobile">Features</a>
       <a class="nav-item is-tab is-hidden-mobile">Pricing</a>
@@ -15,7 +13,7 @@
       <span></span>
     </span>
     <div class="nav-right nav-menu">
-      <a class="nav-item is-tab is-hidden-tablet is-active">Home</a>
+      <a href="/", class="nav-item is-tab is-hidden-tablet is-active">Home</a>
       <a class="nav-item is-tab is-hidden-tablet">Features</a>
       <a class="nav-item is-tab is-hidden-tablet">Pricing</a>
       <a class="nav-item is-tab is-hidden-tablet">About</a>
@@ -25,6 +23,7 @@
         </figure>
         Profile
       </a>
+      <a href="#"></a>
       <a class="nav-item is-tab">
         <% if user_signed_in? %>
           <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: 'nav-item is-tab') %>
