@@ -23,6 +23,8 @@ def self.find_first_by_auth_conditions(warden_conditions)
       where(username: conditions[:username]).first
     end
   end
+end
+
 
 validate :validate_username
 
